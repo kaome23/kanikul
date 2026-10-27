@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Осенние каникулы 🍂</title>
+<style>
+  :root { --cream:#fff8ed; --ink:#38251e; --orange:#bd5d2b; --gold:#e7a84c; --leaf:#68734a; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family: "Trebuchet MS", Arial, sans-serif; color:var(--ink); background:var(--cream); }
+  header {
+    min-height:88vh; display:flex; align-items:center; justify-content:center; text-align:center;
+    padding:70px 22px; position:relative; overflow:hidden;
+    background:linear-gradient(135deg, rgba(52,36,27,.78), rgba(130,65,31,.42)),
+      radial-gradient(ellipse at 20% 20%, #e8b15b 0, transparent 30%),
+      linear-gradient(145deg,#8b4a2c,#d18b45 55%,#6c754b);
+    color:#fff9ed;
+  }
+  header:before, header:after { content:"🍁"; position:absolute; font-size:clamp(70px,14vw,160px); opacity:.25; }
+  header:before { top:8%; left:7%; transform:rotate(-25deg); }
+  header:after { bottom:6%; right:7%; transform:rotate(25deg); }
+  .hero { max-width:760px; position:relative; z-index:1; }
+  .eyebrow { text-transform:uppercase; letter-spacing:4px; font-size:.8rem; font-weight:bold; color:#ffe0a3; }
+  h1 { font-size:clamp(3rem,9vw,6.5rem); line-height:.98; margin:18px 0; letter-spacing:-3px; }
+  .hero p { max-width:560px; margin:0 auto 30px; font-size:clamp(1.05rem,2.6vw,1.35rem); line-height:1.7; }
+  .btn { display:inline-block; background:#fff3d8; color:#65351f; padding:14px 24px; border-radius:999px; text-decoration:none; font-weight:bold; box-shadow:0 8px 25px #3b211d33; transition:transform .2s; }
+  .btn:hover { transform:translateY(-3px); }
+  main { max-width:1100px; margin:auto; padding:70px 22px; }
+  section { margin-bottom:75px; }
+  .section-label { color:var(--orange); text-transform:uppercase; letter-spacing:3px; font-weight:bold; font-size:.78rem; }
+  h2 { font-size:clamp(2rem,5vw,3rem); margin:10px 0 15px; }
+  .intro { max-width:680px; line-height:1.8; color:#72594b; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:28px; }
+  .card { background:#fffdf8; border:1px solid #f0dfc8; border-radius:22px; padding:24px; box-shadow:0 10px 28px #6c45200a; }
+  .emoji { font-size:2.4rem; }
+  .card h3 { margin:12px 0 8px; font-size:1.25rem; }
+  .card p { line-height:1.65; color:#72594b; margin:0; }
+  .quote { background:#e8eadb; border-radius:28px; padding:32px; display:flex; gap:20px; align-items:center; }
+  .quote span { font-size:3rem; }
+  .quote p { font-size:1.25rem; line-height:1.65; margin:0; }
+  .checklist { background:#fffdf8; border:1px solid #f0dfc8; border-radius:24px; padding:25px; max-width:720px; }
+  .checklist label { display:flex; gap:12px; align-items:flex-start; padding:13px 3px; border-bottom:1px dashed #ead8c1; cursor:pointer; line-height:1.5; }
+  .checklist label:last-child { border-bottom:0; }
+  input[type=checkbox] { accent-color:var(--orange); width:18px; height:18px; margin-top:2px; flex-shrink:0; }
+  .progress { height:8px; background:#f0e1cc; border-radius:20px; overflow:hidden; margin:16px 0 8px; }
+  .progress div { height:100%; width:0; background:var(--orange); transition:width .25s; }
+  .days { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:25px; }
+  .day { background:#f3e5d1; padding:18px; border-radius:18px; }
+  .day b { display:block; color:var(--orange); margin-bottom:8px; }
+  footer { background:#39271f; color:#f8e9d5; text-align:center; padding:32px 20px; line-height:1.7; }
+  footer small { color:#d7bda5; }
+  @media(max-width:520px) { .quote { align-items:flex-start; padding:23px; } h1 { letter-spacing:-1.5px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <div class="eyebrow">время замедлиться</div>
+    <h1>Осенние<br>каникулы</h1>
+    <p>Тёплый чай, золотые листья, любимые фильмы и время для себя. Пусть эта неделя будет маленьким уютным приключением.</p>
+    <a class="btn" href="#ideas">Найти вдохновение ↓</a>
+  </div>
+</header>
+<main>
+  <section id="ideas">
+    <div class="section-label">Идеи для отдыха</div>
+    <h2>Чем заняться осенью?</h2>
+    <p class="intro">Необязательно каждый день быть продуктивным. Выбирай то, что поднимает настроение, и оставляй место для спонтанных планов.</p>
+    <div class="cards">
+      <article class="card"><div class="emoji">☕</div><h3>Уютный день</h3><p>Приготовь какао или чай, завернись в плед и включи любимый фильм.</p></article>
+      <article class="card"><div class="emoji">🍂</div><h3>Прогулка</h3><p>Найди красивый парк, собери разноцветные листья и сделай осенние фотографии.</p></article>
+      <article class="card"><div class="emoji">📚</div><h3>Время для себя</h3><p>Почитай книгу, порисуй, веди дневник или попробуй новое хобби.</p></article>
+      <article class="card"><div class="emoji">🧁</div><h3>Что-нибудь вкусное</h3><p>Испеки печенье, приготовь любимый десерт или устрой домашнее чаепитие.</p></article>
+      <article class="card"><div class="emoji">🎬</div><h3>Киновечер</h3><p>Выбери фильм, приглуши свет и устрой настоящий домашний кинотеатр.</p></article>
+      <article class="card"><div class="emoji">🫶</div><h3>Встреча с друзьями</h3><p>Погуляйте, сыграйте в настольную игру или просто поболтайте обо всём.</p></article>
+    </div>
+  </section>
+  <section>
+    <div class="quote"><span>🍁</span><p>«Осень напоминает: можно отпускать лишнее, отдыхать и начинать что-то новое в своём темпе».</p></div>
+  </section>
+  <section>
+    <div class="section-label">Маленький план</div>
+    <h2>Осенний чек-лист</h2>
+    <p class="intro">Отмечай идеи, которые уже успела попробовать. Никаких обязательств — это список для удовольствия, а не домашнее задание.</p>
+    <div class="checklist">
+      <label><input type="checkbox">Погулять и полюбоваться осенними листьями</label>
+      <label><input type="checkbox">Посмотреть фильм или сериал, который давно откладывала</label>
+      <label><input type="checkbox">Приготовить любимый напиток или десерт</label>
+      <label><input type="checkbox">Провести время с близкими или друзьями</label>
+      <label><input type="checkbox">Устроить день без спешки</label>
+      <label><input type="checkbox">Подготовить вещи и планы к возвращению в школу</label>
+      <div class="progress"><div id="bar"></div></div>
+      <small id="count">Выполнено: 0 из 6</small>
+    </div>
+  </section>
+  <section>
+    <div class="section-label">Немного вдохновения</div>
+    <h2>Настроение на каждый день</h2>
+    <div class="days">
+      <div class="day"><b>Понедельник</b>Медленный старт и отдых</div>
+      <div class="day"><b>Вторник</b>Прогулка и фотографии</div>
+      <div class="day"><b>Среда</b>Книга или творчество</div>
+      <div class="day"><b>Четверг</b>Вкусный домашний десерт</div>
+      <div class="day"><b>Пятница</b>Киновечер</div>
+      <div class="day"><b>Выходные</b>Друзья, семья и приятные мелочи</div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div>Пусть каникулы будут тёплыми, даже если за окном прохладно 🍁</div>
+  <small>Сделано с осенним настроением</small>
+</footer>
+<script>
+  const checks = [...document.querySelectorAll('input[type="checkbox"]')];
+  const bar = document.getElementById('bar');
+  const count = document.getElementById('count');
+  function updateProgress() {
+    const done = checks.filter(c => c.checked).length;
+    bar.style.width = (done / checks.length * 100) + '%';
+    count.textContent = `Выполнено: ${done} из ${checks.length}`;
+  }
+  checks.forEach(c => c.addEventListener('change', updateProgress));
+</script>
+</body>
+</html>
